@@ -76,5 +76,6 @@ API_SYSEX_ENABLE = no
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 
 LAYOUTS = ortho_4x12 planck_mit planck_grid
+LAYOUTS_HAS_RGB = no
 
 DEFAULT_FOLDER = planck/rev5
