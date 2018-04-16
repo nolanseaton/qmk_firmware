@@ -40,11 +40,11 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = KC_KEYMAP(
  //,----+----+----+----+----+----|----+----+----+----+----+----+----.
-    TAB , Q  , W  , E  , R  , T  , Y  , U  , I  , O  , P  ,LBRC ,BSPC,
+    TAB , Q  , W  , E  , R  , T  , Y  , U  , I  , O  , P  ,LBRC,BSPC,
  //|----`----`----`----`----`----|----`----`----`----`----`----`----|
-    LCTL  , A  , S  , D  , F  , G  , H  , J  , K  , L  ,SCLN, QUOTFN1,
+    LCTL  , A  , S  , D  , F  , G  , H  , J  , K  , L  ,SCLN,QUOTFN1,
  //|-----`----`----`----`----`----|----`----`----`----`----`--------|
-    LSFT   , Z  , X  , C  , V  , B  , N  , M  ,COMM,DOT ,SLSH, FN2 ,
+    LSFT   , Z  , X  , C  , V  , B  , N  , M  ,COMM, DOT ,SLSH, FN2 ,
  //|-------`----`----`----`----`----|----`----`----`----`----`------|
     FN1, LALT, LGUI ,SPACE , ENTER  ,  SPACE, RGUI , GRV , DEL , ESC
  //`-----+----+-----+----+--------|--------+-----+-----+-----+------'
