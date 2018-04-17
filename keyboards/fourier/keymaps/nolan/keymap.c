@@ -16,6 +16,14 @@ enum custom_keycodes {
   QWERTY = SAFE_RANGE,
 };
 
+enum {
+  TD_BR = 0
+};
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+  [TD_BR]  = ACTION_TAP_DANCE_DOUBLE(KC_LBRC, KC_RBRC)
+};
+
 #define KC_ KC_TRNS
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
@@ -23,8 +31,8 @@ enum custom_keycodes {
 #define KC_FN2 MO(_FN2)
 #define KC_SPFN1 LT(_FN1, KC_SPACE)
 #define KC_SPFN2 LT(_FN2, KC_SPACE)
-#define KC_BSFN1 LT(_FN1, KC_BSPC)
-#define KC_BSFN2 LT(_FN2, KC_BSPC)
+#define KC_ENFN1 LT(_FN1, KC_ENTER)
+#define KC_ENFN2 LT(_FN2, KC_ENTER)
 #define KC_QUOTFN1 LT(_FN1, KC_QUOT)
 #define KC_RST RESET
 #define KC_DBUG DEBUG
@@ -36,17 +44,18 @@ enum custom_keycodes {
 #define KC_RSAD RGB_SAD
 #define KC_RVAI RGB_VAI
 #define KC_RVAD RGB_VAD
+#define KC_TDBRC TD(0)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = KC_KEYMAP(
  //,----+----+----+----+----+----|----+----+----+----+----+----+----.
-    TAB , Q  , W  , E  , R  , T  , Y  , U  , I  , O  , P  ,LBRC,BSPC,
+    TAB , Q  , W  , E  , R  , T  , Y  , U  , I  , O  , P  ,TDBRC,BSPC,
  //|----`----`----`----`----`----|----`----`----`----`----`----`----|
     LCTL  , A  , S  , D  , F  , G  , H  , J  , K  , L  ,SCLN,QUOTFN1,
  //|-----`----`----`----`----`----|----`----`----`----`----`--------|
     LSFT   , Z  , X  , C  , V  , B  , N  , M  ,COMM, DOT ,SLSH, FN2 ,
  //|-------`----`----`----`----`----|----`----`----`----`----`------|
-    FN1, LALT, LGUI ,SPACE , ENTER  ,  SPACE, RGUI , GRV , DEL , ESC
+    FN1, LALT, LGUI ,SPACE , ENFN1  ,  SPFN1, RGUI , GRV , DEL , ESC
  //`-----+----+-----+----+--------|--------+-----+-----+-----+------'
   ),
 
@@ -54,11 +63,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //,----+----+----+----+----+----|----+----+----+----+----+----+----.
     GRV , 1  , 2  , 3  , 4  , 5  , 6  , 7  , 8  , 9  , 0  ,MINS,EQL ,
  //|----`----`----`----`----`----|----`----`----`----`----`----`----|
-      ,RHUI,RSAI,RVAI,VOLU,LBRC,RBRC, 4  , 5  , 6  ,SCLN,        ,
+      , , , ,              ,LBRC,   RBRC, 4  , 5  , 6  ,   ,        ,
  //|-----`----`----`----`----`----|----`----`----`----`----`--------|
-       ,RHUD,RSAD,RVAD,VOLD,LCBR,RCBR, 1  , 2  , 3  , UP ,      ,
+       , , , ,               ,LCBR,  RCBR,   1  , 2  , 3  , UP ,    ,
  //|-------`----`----`----`----`----|----`----`----`----`----`------|
-     ,    ,   ,    ,        ,  DEL   ,  0  ,LEFT ,DOWN , RGHT
+     ,    ,   ,    ,        ,              ,  0  ,LEFT ,DOWN , RGHT
  //`-----+----+-----+----+--------|--------+-----+-----+-----+------'
   ),
 
@@ -66,11 +75,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //,----+----+----+----+----+----|----+----+----+----+----+----+----.
     TILD,EXLM, AT ,HASH,DLR ,PERC,CIRC,AMPR,ASTR,LPRN,RPRN,UNDS,PLUS,
  //|----`----`----`----`----`----|----`----`----`----`----`----`----|
-         ,    ,    ,INS ,PGUP,HOME,    ,    ,    ,    ,COLN,        ,
+         ,    ,    ,    ,    ,    ,    ,    ,    ,    ,    ,        ,
  //|-----`----`----`----`----`----|----`----`----`----`----`--------|
-           ,    ,    ,DEL ,PGDN,END ,    ,    ,    ,    ,    ,      ,
+           ,    ,    ,    ,    ,    ,    ,    ,    ,    ,    ,      ,
  //|-------`----`----`----`----`----|----`----`----`----`----`------|
-         ,    ,     ,    ,  DEL   ,        ,     ,     ,     ,
+         ,    ,     ,    ,        ,        ,     ,     ,     ,
  //`-----+----+-----+----+--------|--------+-----+-----+-----+------'
   )
 
