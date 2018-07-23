@@ -92,7 +92,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch(keycode) {
             case MY_CUSTOM_MACRO:
-                SEND_STRING("0Hockey0Rizzo0Buffalo!");
+                SEND_STRING("¯\_(ツ)_/¯");
                 return false;
         }
     }
