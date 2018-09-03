@@ -27,6 +27,7 @@
 #define BACKLIGHT_PIN B5
 #ifdef BACKLIGHT_PIN
 #define BACKLIGHT_LEVELS 10
+#define BACKLIGHT_BREATHING
 #endif
 
 /* Set 0 if debouncing isn't needed */
