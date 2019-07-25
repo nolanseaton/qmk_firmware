@@ -7,14 +7,14 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	KEYMAP(
-		LCAG(KC_1),       LCAG(KC_UP),                LCAG(KC_2),
-		LCAG(KC_LEFT),    LT(1, KC_MEDIA_PLAY_PAUSE), LCAG(KC_RGHT),
-		LCAG(KC_3),       LCAG(KC_DOWN),              LCAG(KC_4)),
+		LGUI(KC_1),       LGUI(KC_2),                 LGUI(KC_3),
+		KC_VOLD,          LT(1, KC_MUTE),             KC_VOLU,
+		HYPR(KC_B),       MY_CUSTOM_MACRO,            HYPR(KC_L)),
 
 	KEYMAP(
 		BL_TOGG,          BL_BRTG,                    RESET,
 		KC_TRNS,          KC_TRNS,                    KC_TRNS,
-		MY_CUSTOM_MACRO,  LCAG(KC_C),                 KC_SYSTEM_SLEEP),
+		KC_TRNS,          KC_TRNS,                    KC_TRNS),
 
 	KEYMAP(
 		KC_TRNS, KC_TRNS, KC_TRNS,
@@ -92,7 +92,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch(keycode) {
             case MY_CUSTOM_MACRO:
-                SEND_STRING("¯\_(ツ)_/¯");
+                SEND_STRING("git fetch && git status");
                 return false;
         }
     }
