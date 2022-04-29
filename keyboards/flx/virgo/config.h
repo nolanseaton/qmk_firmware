@@ -70,3 +70,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_EFFECT_RGB_TEST
     #define RGBLIGHT_EFFECT_ALTERNATING
 #endif
+
+//Nolan's edits
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 220
