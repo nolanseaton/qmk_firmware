@@ -77,9 +77,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-const uint16_t PROGMEM paren_combo[] = {KC_T, KC_Y, COMBO_END};
-const uint16_t PROGMEM bracket_combo[] = {HOME_G, HOME_H, COMBO_END};
+const uint16_t PROGMEM lparen_combo[] = {KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM rparen_combo[] = {KC_U, KC_I, COMBO_END};
+
+const uint16_t PROGMEM lbracket_combo[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM rbracket_combo[] = {KC_I, KC_O, COMBO_END};
+
+const uint16_t PROGMEM quote_combo[] = {HOME_F, HOME_J, COMBO_END};
+const uint16_t PROGMEM dquote_combo[] = {HOME_D, HOME_K, COMBO_END};
+
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(paren_combo, KC_LPRN),
-    COMBO(bracket_combo, KC_LBRC),
+    COMBO(lparen_combo, KC_LPRN),
+    COMBO(rparen_combo, KC_RPRN),
+
+    COMBO(lbracket_combo, KC_LBRC),
+    COMBO(rbracket_combo, KC_RBRC),
+
+    COMBO(quote_combo, KC_QUOT),
+    COMBO(dquote_combo, KC_DQT)
 };

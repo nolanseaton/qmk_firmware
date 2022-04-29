@@ -85,5 +85,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //Nolan's edits
 #define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_TERM 220
-#define COMBO_COUNT 2
+#define TAPPING_TERM 210
+#define COMBO_COUNT 6
