@@ -73,14 +73,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-const uint16_t PROGMEM lparen_combo[] = {KC_E, KC_R, COMBO_END};
-const uint16_t PROGMEM rparen_combo[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM lparen_combo[] = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM rparen_combo[] = {KC_M, KC_COMM, COMBO_END};
 
-const uint16_t PROGMEM lbracket_combo[] = {KC_W, KC_E, COMBO_END};
-const uint16_t PROGMEM rbracket_combo[] = {KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM lbracket_combo[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM rbracket_combo[] = {KC_COMM, KC_DOT, COMBO_END};
+
+const uint16_t PROGMEM lcbracket_combo[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM rcbracket_combo[] = {KC_DOT, KC_SLSH, COMBO_END};
 
 const uint16_t PROGMEM quote_combo[] = {HOME_F, HOME_J, COMBO_END};
 const uint16_t PROGMEM dquote_combo[] = {HOME_D, HOME_K, COMBO_END};
+const uint16_t PROGMEM grv_combo[] = {HOME_S, HOME_L, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(lparen_combo, KC_LPRN),
@@ -89,6 +93,10 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(lbracket_combo, KC_LBRC),
     COMBO(rbracket_combo, KC_RBRC),
 
+    COMBO(lcbracket_combo, KC_LCBR),
+    COMBO(rcbracket_combo, KC_RCBR),
+
     COMBO(quote_combo, KC_QUOT),
-    COMBO(dquote_combo, KC_DQT)
+    COMBO(dquote_combo, KC_DQT),
+    COMBO(grv_combo, KC_GRV)
 };
