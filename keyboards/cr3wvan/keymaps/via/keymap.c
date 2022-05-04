@@ -44,9 +44,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_2x3u(
       KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-      KC_LCTL, HOME_A,  HOME_S,  HOME_D,  HOME_F,  HOME_G,  HOME_H,  HOME_J,  HOME_K,  HOME_L,  HOME_SC, KC_ENT,
-      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    HOME_B,  HOME_N,  KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-      KC_LALT, KC_LGUI,          BSPC_LYR,         KC_ENT,           SPC_LYR,          KC_RGUI, KC_RALT, KC_RCTL
+      KC_LCTL, HOME_A,  HOME_S,  HOME_D,  HOME_F,  HOME_G,  HOME_H,  HOME_J,  HOME_K,  HOME_L,  HOME_SC, KC_QUOT,
+      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    HOME_B,  HOME_N,  KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
+      KC_LALT, KC_LGUI,          BSPC_LYR,         KC_ENT,           SPC_LYR,          KC_GRV,  KC_BSLS, KC_ESC
     ),
 
 
