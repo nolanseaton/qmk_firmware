@@ -1,30 +1,16 @@
 {
     "manufacturer": "IDOBAO",
     "keyboard_name": "ID67",
+    "manufacturer": "IDOBAO",
+    "url": "https://idobao.net",
     "maintainer": "thewerther",
-    "bootloader": "atmel-dfu",
-    "diode_direction": "COL2ROW",
-    "debounce": 5,
-    "features": {
-        "bootmagic": true,
-        "mousekey": true,
-        "extrakey": true,
-        "command": false,
-        "console": false,
-        "nkro": true,
-        "backlight": false,
-        "rgblight": false
-    },
-    "matrix_pins": {
-        "cols": ["C7", "F6", "F5", "F4", "F1", "B7", "D5", "D1", "D2", "D3", "D4", "D0", "D6", "D7", "B4"],
-        "rows": ["B0", "B1", "B2", "B3", "F7"]
-    },
-    "processor": "atmega32u4",
-    "url": "https://idobao.net/search?type=product&q=ID67*",
     "usb": {
         "vid": "0x6964",
-        "pid": "0x0267",
-        "device_version": "2.0.0"
+        "pid": "0x0067",
+        "device_version": "0.0.2"
+    },
+    "layout_aliases": {
+        "LAYOUT": "LAYOUT_65_ansi_blocker"
     },
     "layouts": {
         "LAYOUT_65_ansi_blocker": {
