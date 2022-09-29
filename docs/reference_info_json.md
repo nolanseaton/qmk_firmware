@@ -91,6 +91,8 @@ Direct pins are when you connect one side of the switch to GND and the other sid
 
 When specifying direct pins you need to arrange them in nested arrays. The outer array consists of rows, while the inner array uses text strings to identify the pins used in each row. You can use `null` to indicate an empty spot in the matrix.
 
+Notice that when using direct pins, `diode_direction` is left undefined.
+
 Example:
 
 ```json
@@ -112,6 +114,14 @@ Example:
 
 This section controls basic 2-pin LEDs, which typically pass through keyswitches and are soldered into the PCB, or are placed in PCB sockets.
 ### Backlight
+
+Enable by setting 
+
+```json
+    "features": {
+        "backlight": true
+    }
+```
 
 * `breathing`
     * Enable backlight breathing, if supported
@@ -177,8 +187,9 @@ The following items can be set. Not every value is required.
     * Set to `true` to enable synchronization functionality between split halves
 * `split_count`
     * For split keyboards, the number of LEDs on each side
+    * Example `[ 10 , 10 ]`
 * `max_brightness`
-    * (0-255) What the maxmimum brightness (value) level is
+    * What the maximum brightness (value) level is (0-255)
 * `hue_steps`
     * How many steps of adjustment to have for hue
 * `saturation_steps`
@@ -238,6 +249,50 @@ Example:
 ```
 
 The device version is a BCD (binary coded decimal) value, in the format `MMmr`, so the below value would look like `0x0100` in the generated code. This also means the maximum valid values for each part are `99.9.9`, despite it being a hexadecimal value under the hood.
+
+### Encoders
+
+This section controls the basic [rotary encoder](feature_encoders.md) support.
+
+Enable by setting 
+
+```json
+    "features": {
+        "encoder": true
+    }
+```
+
+The following items can be set. Not every value is required.
+
+* `pin_a`
+  * __Required__. A pad definition
+* `pin_b`
+  * __Required__. B pad definition
+* `resolution`
+  * How many pulses the encoder registers between each detent
+
+Examples:
+
+```json
+{
+    "encoder": {
+        "rotary": [
+            { "pin_a": "B5", "pin_b": "A2" }
+        ]
+    }
+}
+```
+
+```json
+{
+    "encoder": {
+        "rotary": [
+            { "pin_a": "B5", "pin_b": "A2", "resolution": 4 }
+            { "pin_a": "B6", "pin_b": "A3", "resolution": 2 }
+        ]
+    }
+}
+```
 
 ### Secure
 
