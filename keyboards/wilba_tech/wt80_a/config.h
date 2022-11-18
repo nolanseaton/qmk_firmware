@@ -124,3 +124,7 @@
 
 // VIA lighting is handled by the keyboard-level code
 #define VIA_CUSTOM_LIGHTING_ENABLE
+
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 210
+#define COMBO_COUNT 2
