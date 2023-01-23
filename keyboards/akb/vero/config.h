@@ -21,3 +21,7 @@
 
 /* Set HSE clock since it differs from F411 default */
 #define STM32_HSECLK 16000000
+
+//Nolan's edits
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 220
